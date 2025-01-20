@@ -14,7 +14,7 @@ class ingestion_config:
 
 class DataIngestion:
     def __init__(self):
-        self.ingestion_config = ingestion_config
+        self.ingestion_config = ingestion_config()
     
     def initiate_data_ingestion(self):
         try:
@@ -36,7 +36,3 @@ class DataIngestion:
             )
         except Exception as e:
             raise customException(e, sys)
-        
-if __name__ == "__main__":
-    obj = DataIngestion()
-    obj.initiate_data_ingestion()
